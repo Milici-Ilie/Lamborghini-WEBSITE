@@ -1,0 +1,217 @@
+.hexagon {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  height: 7rem;
+  width: 6rem;
+  /* We cut the element in an hexagonal shape */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: background-color 0.4s; //this will make the transition animation to start slow (normal) and when not hover anymore it will disappear also slowly
+
+  &:hover {
+    background-color: var(--light);
+    //the same thing like the code at the bottom, but this one is included here
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background: var(--white);
+    clip-path: polygon(
+      /* We first go around the pseudo element to recreate the hexagon */ 50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%,
+      /* We make sure to close the hexagon and go back to the start */ 50% 0%,
+      /* We then go down inside the hexagon (feel free to change the border size, here it is of 10px)*/
+        50% 2.2px,
+      /* We finally go around the pseudo element in reverse to carve a smaller hexagon inside */
+        /* 0.49999999999999994 is sin(30deg) as it's only supported in Safari for now */
+        2.2px calc(25% + 2.2px * 0.49999999999999994),
+      2.2px calc(75% + 2.2px * -0.49999999999999994),
+      50% calc(100% - 2.2px),
+      calc(100% - 2.2px) calc(75% + 2.2px * -0.49999999999999994),
+      calc(100% - 2.2px) calc(25% + 2.2px * 0.49999999999999994),
+      50% 2.2px
+    );
+  }
+
+  &__arrow-right {
+    & path {
+      stroke: var(--white);
+    }
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    stroke-width: 2px; //this is the thickness (grosimea) of the arrow
+  }
+
+  &__arrow-left {
+    & path {
+      stroke: var(--light);
+    }
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    stroke-width: 1px; //this is the thickness (grosimea) of the arrow
+  }
+
+  &__plus {
+    & path {
+      stroke: var(--light);
+    }
+
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    stroke-width: 1px; //this is the thickness (grosimea) of the arrow
+  }
+
+  &_arrow-up {
+    & path {
+      stroke: var(--light);
+    }
+
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.7rem;
+    height: 1.7rem;
+    stroke-width: 2px; //this is the thickness (grosimea) of the arrow
+  }
+}
+.hexagon:hover .hexagon__arrow-right path {
+  stroke: var(--gray-dark);
+}
+
+.hexagon:hover .hexagon__arrow-left path {
+  stroke: var(--gray-dark);
+}
+
+.hexagon:hover .hexagon__plus path {
+  stroke: var(--gray-dark);
+}
+
+.hexagon:hover .hexagon_arrow-up path {
+  stroke: var(--gray-dark);
+}
+.hexagon:active .hexagon_arrow-up path {
+  stroke: var(--gray-dark);
+}
+
+.hexagon-second {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  height: 7rem;
+  width: 6rem;
+
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: background-color 0.4s;
+
+  &:hover {
+    background-color: var(--gray-dark);
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background: var(--gray-dark);
+    clip-path: polygon(
+      50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%,
+      50% 0%,
+
+      50% 2.2px,
+
+      2.2px calc(25% + 2.2px * 0.49999999999999994),
+      2.2px calc(75% + 2.2px * -0.49999999999999994),
+      50% calc(100% - 2.2px),
+      calc(100% - 2.2px) calc(75% + 2.2px * -0.49999999999999994),
+      calc(100% - 2.2px) calc(25% + 2.2px * 0.49999999999999994),
+      50% 2.2px
+    );
+  }
+
+  &__arrow-right {
+    & path {
+      stroke: var(--gray-dark);
+    }
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    stroke-width: 1px;
+  }
+}
+
+.hexagon-second:hover .hexagon-second__arrow-right path {
+  stroke: white;
+}
+
+.hexagon-chat {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  height: 5rem;
+  width: 4.5rem;
+
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: background-color 0.4s;
+  background-color: var(--gray-dark);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-medium-small) {
+    width: 11rem;
+    height: 12.5rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    width: 8.5rem;
+    height: 10rem;
+  }
+
+  @media only screen and (max-width: $bp-mobile) {
+    width: 6.5rem;
+    height: 7.5rem;
+  }
+
+  @media only screen and (max-width: $bp-mobile-small) {
+    width: 5rem;
+    height: 5.5rem;
+  }
+}

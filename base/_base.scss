@@ -1,0 +1,93 @@
+.container {
+  display: grid;
+
+  grid-template-rows:
+    100vh 80vh 90vh 80vh
+    repeat(2, max-content);
+
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      10,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    minmax(6rem, 1fr) [full-end];
+
+  // overflow: hidden;
+
+  @media only screen and (max-width: $bp-large-minus) {
+    // grid-template-rows:
+    //   100vh 80vh 90vh 80vh
+    //   repeat(2, max-content);
+
+    grid-template-columns:
+      [full-start] minmax(10rem, 1fr) [center-start] repeat(
+        10,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      minmax(10em, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows:
+      100vh 80vh 70vh 80vh
+      repeat(2, max-content);
+
+    grid-template-columns:
+      [full-start] minmax(10rem, 1fr) [center-start] repeat(
+        10,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      minmax(10rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-medium-minus) {
+    grid-template-columns:
+      [full-start] minmax(10rem, 1fr) [center-start] repeat(
+        10,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      minmax(10rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-medium-small) {
+    grid-template-rows:
+      100vh 100vh 80vh
+      repeat(2, min-content);
+
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [center-start] repeat(
+        10,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      minmax(2rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-template-rows:
+      100vh 85vh 80vh
+      repeat(2, min-content);
+
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [center-start] repeat(
+        10,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      minmax(2rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-mobile-ultra-small) {
+    grid-template-rows:
+      100vh 100vh 80vh
+      repeat(2, min-content);
+
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [center-start] repeat(
+        10,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      minmax(2rem, 1fr) [full-end];
+  }
+}
+
+//////////////////////////////////
+///

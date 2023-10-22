@@ -1,0 +1,17 @@
+{
+  "name": "lamborghini_project",
+  "version": "1.0.0",
+  "description": "lamborghini_website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Milici Ilie",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "dependencies": {
+    "ionicons": "^7.1.2"
+  }
+}

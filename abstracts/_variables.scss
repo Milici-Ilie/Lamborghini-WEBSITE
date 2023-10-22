@@ -1,0 +1,93 @@
+// $color-primary: #55c57a;
+// $color-primary-light: #7ed56f;
+// $color-primary-dark: #28b485;
+
+// $color-secondary-light: #ffb900;
+// $color-secondary-dark: #ff7730;
+
+// $color-tertiary-light: #2998ff;
+// $color-tertiary-dark: #5643fa;
+
+// $color-grey-light-1: #f7f7f7;
+// $color-grey-light-2: #eee;
+
+// $color-grey-dark: #777;
+// $color-grey-dark-2: #999;
+// $color-grey-dark-3: #333;
+
+// $color-white: #fff;
+// $color-black: #000;
+
+// // FONT
+// $default-font-size: 1.6rem;
+
+// GRID
+$bp-abomination: 180em;
+$bp-maximum: 162em;
+$bp-ultra-large: 143em;
+$bp-extra-large: 125em;
+$bp-large-medium: 115em;
+$bp-large: 100em;
+$bp-large-minus: 94.7em;
+$bp-medium: 85em;
+$bp-medium-minus: 75em;
+$bp-medium-between: 69.4em;
+$bp-medium-small: 64em;
+$bp-small: 55em;
+$bp-smaller: 47em;
+$bp-mobile: 37em;
+$bp-mobile-small: 33em;
+$bp-mobile-very-small: 29.5em;
+$bp-mobile-ultra-small: 26.5625em;
+$bp-mobile-ultra-small-minus: 22.2em;
+
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+$shadow_dark: linear-gradient(
+  to right bottom,
+  rgba(0, 0, 0, 0.8),
+  rgba(0, 0, 0, 0.8)
+);
+$shadow_gray: linear-gradient(
+  to right bottom,
+  rgba(0, 0, 0, 0.6),
+  rgba(0, 0, 0, 0.6)
+);
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #dfb400;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #464646;
+  --gray-dark: #111415;
+  --primary: #007bff;
+  --secondary: #464646;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #dfb400;
+  --danger: #dc3545;
+  --light: #f8f8f7;
+  --dark: #343a40;
+  --light-gray: rgb(157, 157, 157);
+  --light-dark: rgb(214, 214, 214);
+  // --breakpoint-xs: 0;
+  // --breakpoint-sm: 768px;
+  // --breakpoint-md: 1025px;
+  // --breakpoint-lg: 1366px;
+  // --breakpoint-xl: 1600px;
+  // --breakpoint-xxl: 1921px;
+
+  --font-family-sans-serif: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
